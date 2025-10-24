@@ -1,0 +1,78 @@
+/* Shared site styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: green;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center page content horizontally */
+    color: #000; /* default text color (adjustable) */
+    padding: 20px; /* small page padding */
+    box-sizing: border-box;
+}
+
+/* Make the main content area a centered column with a max width */
+.container {
+    width: 100%;
+    max-width: 1000px; /* change as needed */
+}
+
+/* Top navigation centered */
+.topnav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    background: transparent;
+    padding: 8px 0;
+}
+.topnav a{
+    color: rgb(42, 216, 11);
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover{
+    background-color: darkgreen;
+    color: white;
+}
+.topnav a.active{
+    color: rgb(42, 216, 11);
+}
+
+/* Utility classes for images */
+.centered-img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+.images-row{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    padding:10px 0;
+}
+.images-row img{width:200px;height:auto;display:block}
+
+/* Center text elements inside container */
+.container h1,
+.container p,
+.container h2,
+.container h3,
+.container ul,
+.container ol,
+.container figure,
+.container address{
+    text-align: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px){
+    .images-row img{width:45%;}
+    .container{padding:0 12px}
+}
